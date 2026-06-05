@@ -14,6 +14,11 @@ const newMessageRoutes = require("./routes/newMessageRoutes");
 app.use("/", messagesRoute);
 app.use("/new", newMessageRoutes);
 
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(404).render("error", { err });
+});
+
 app.listen(3000, function () {
   console.log("Express server listening on port 3000 | http://localhost:3000");
 });
