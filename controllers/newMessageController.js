@@ -1,13 +1,13 @@
-const messages = require("./messagesController");
+const messagesController = require("./messagesController");
 
 const getNewMessageForm = (req, res) => {
   res.render("form");
 };
 
 const newMessage = (req, res) => {
-  console.table(messages);
+  console.table(messagesController.messages);
   const message = req.body.message;
-  messages.push({
+  messagesController.messages.push({
     text: req.body.message,
     user: req.body.username,
     added: new Date(),
