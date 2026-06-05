@@ -1,5 +1,5 @@
 const newMessage = (req, res) => {
-  res.send("NewMess");
+  res.render("new");
 };
 
 module.exports = { newMessage };
