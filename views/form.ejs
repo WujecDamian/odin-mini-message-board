@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odynex</title>
+  </head>
+
+  <body>
+    <%- include('./partials/navbar') %>
+    <section class="form">
+      <h2>Add new message!</h2>
+      <form method="POST" action="/new">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" />
+        <label for="message"></label>
+        <input type="text" name="message" id="message" />
+        <input type="submit" value="Add" />
+      </form>
+    </section>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
