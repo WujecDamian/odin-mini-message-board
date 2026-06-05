@@ -1,5 +1,5 @@
 const newMessage = (req, res) => {
-  res.render("form");
+  const message = req.body.message;
 };
 
 module.exports = { newMessage };
