@@ -14,5 +14,11 @@ const messages = [
 const getMessages = (req, res) => {
   res.render("home", { messages });
 };
+const getMessageDetails = (req, res) => {
+  const url = req.url.split("/");
+  const id = url[2];
+  const message = messages[id];
+  res.render("messageDetails", { message });
+};
 
-module.exports = { getMessages, messages };
+module.exports = { getMessages, getMessageDetails, messages };
