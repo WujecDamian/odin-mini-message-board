@@ -9,15 +9,15 @@
   <body>
     <%- include('./partials/navbar') %>
     <section class="messages">
-      <% messages.forEach(message=> { %>
+      <% for(let i=0;i< messages.length;i++) { %>
       <div class="message">
-        <h2 class="message__user"><%= message.user %></h2>
-        <p class="message__text"><%= message.text %></p>
+        <h2 class="message__user"><%= messages[i].user %></h2>
+        <p class="message__text"><%= messages[i].text %></p>
         <button class="message__details">
-          <a href="/user">Open</a>
+          <a href="/messages/">Open</a>
         </button>
       </div>
-      <% }) %>
+      <% } %>
     </section>
     <%- include('./partials/footer') %>
   </body>
