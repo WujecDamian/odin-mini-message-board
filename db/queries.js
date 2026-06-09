@@ -1,7 +1,7 @@
 const pool = require("./pool");
 
-async function getAllUsernames() {
-  const { rows } = await pool.query("SELECT * FROM usernames");
+async function getAllMessages() {
+  const { rows } = await pool.query("SELECT * FROM messages");
   return rows;
 }
 
@@ -10,6 +10,6 @@ async function insertUsername(username) {
 }
 
 module.exports = {
-  getAllUsernames,
+  getAllMessages,
   insertUsername,
 };
