@@ -11,7 +11,7 @@
     <section class="messages">
       <% for(let i=0;i< messages.length;i++) { %>
       <div class="message">
-        <h2 class="message__user"><%= messages[i].user %></h2>
+        <h2 class="message__user"><%= messages[i].username %></h2>
         <p class="message__text"><%= messages[i].text %></p>
         <button class="message__details">
           <a href="/messages/<%= i%>">Open</a>
